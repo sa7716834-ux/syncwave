@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SyncWave — Team Chat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-body">
+
+  <div class="auth-bg">
+    <canvas id="gridCanvas"></canvas>
+    <div class="auth-glow"></div>
+  </div>
+
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="2" y="2" width="12" height="12" rx="2" fill="#00e5ff" opacity="0.9"/>
+            <rect x="18" y="2" width="12" height="12" rx="2" fill="#00e5ff" opacity="0.5"/>
+            <rect x="2" y="18" width="12" height="12" rx="2" fill="#00e5ff" opacity="0.5"/>
+            <rect x="18" y="18" width="12" height="12" rx="2" fill="#00e5ff" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SyncWave</span>
+          <span class="brand-tag">// realtime collaboration</span>
+        </div>
+      </div>
+
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login">Sign In</button>
+        <button class="auth-tab" data-tab="register">Register</button>
+      </div>
+
+      <form id="loginForm" class="auth-form active" autocomplete="off">
+        <div class="form-group">
+          <label class="form-label">Username</label>
+          <input type="text" class="form-input" id="loginUsername" placeholder="your_handle" autocomplete="off" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-input" id="loginPassword" placeholder="••••••••" autocomplete="off" />
+        </div>
+        <div class="form-error" id="loginError"></div>
+        <button type="submit" class="btn-primary">
+          <span>Connect</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="demo-hint">
+          <span>Demo:</span> try <code>alice</code> / <code>demo123</code>
+        </div>
+      </form>
+
+      <form id="registerForm" class="auth-form" autocomplete="off">
+        <div class="form-group">
+          <label class="form-label">Display Name</label>
+          <input type="text" class="form-input" id="regName" placeholder="Ada Lovelace" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Username</label>
+          <input type="text" class="form-input" id="regUsername" placeholder="ada_dev" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-input" id="regPassword" placeholder="Min. 6 characters" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Avatar Color</label>
+          <div class="color-picker" id="colorPicker">
+            <div class="color-swatch active" data-color="#00e5ff" style="background:#00e5ff"></div>
+            <div class="color-swatch" data-color="#ff4d6d" style="background:#ff4d6d"></div>
+            <div class="color-swatch" data-color="#69ff47" style="background:#69ff47"></div>
+            <div class="color-swatch" data-color="#ffd60a" style="background:#ffd60a"></div>
+            <div class="color-swatch" data-color="#bd93f9" style="background:#bd93f9"></div>
+            <div class="color-swatch" data-color="#ff9f43" style="background:#ff9f43"></div>
+          </div>
+        </div>
+        <div class="form-error" id="regError"></div>
+        <button type="submit" class="btn-primary">
+          <span>Create Account</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+      </form>
+    </div>
+
+    <div class="auth-features">
+      <div class="feature-item">
+        <div class="feature-dot"></div>
+        <span>Realtime messaging across channels</span>
+      </div>
+      <div class="feature-item">
+        <div class="feature-dot"></div>
+        <span>Live typing indicators &amp; presence</span>
+      </div>
+      <div class="feature-item">
+        <div class="feature-dot"></div>
+        <span>File sharing &amp; AI-powered replies</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
