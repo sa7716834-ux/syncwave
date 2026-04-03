@@ -131,4 +131,4 @@ git push origin main
 
 ---
 
-MIT License — built with ❤️ by SyncWave
+MIT License — built by Syed Saif Ali
