@@ -10,7 +10,7 @@
   function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; draw(); }
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.strokeStyle = 'rgba(0,229,255,0.07)';
+    ctx.strokeStyle = 'rgba(37,99,235,0.08)';
     ctx.lineWidth = 1;
     const gap = 40;
     for (let x = 0; x < canvas.width; x += gap) {
@@ -37,7 +37,7 @@ tabs.forEach(tab => {
 });
 
 // ---- Color picker ----
-let selectedColor = '#00e5ff';
+let selectedColor = '#2563eb';
 document.querySelectorAll('.color-swatch').forEach(sw => {
   sw.addEventListener('click', () => {
     document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
@@ -57,7 +57,7 @@ document.getElementById('loginForm').addEventListener('submit', e => {
 
   // Load mock-db inline for auth page (simplified)
   const users = JSON.parse(localStorage.getItem('sw_users') || 'null') || [
-    { id: 'u1', username: 'alice', name: 'Alice Chen', color: '#00e5ff', password: 'demo123', role: 'admin' },
+    { id: 'u1', username: 'alice', name: 'Alice Chen', color: '#2563eb', password: 'demo123', role: 'admin' },
     { id: 'u2', username: 'bob',   name: 'Bob Hartley', color: '#ff4d6d', password: 'demo123', role: 'member' },
     { id: 'u3', username: 'carla', name: 'Carla Moss',  color: '#bd93f9', password: 'demo123', role: 'member' },
     { id: 'u4', username: 'dev',   name: 'Dev Sharma',  color: '#69ff47', password: 'demo123', role: 'member' },
@@ -86,7 +86,7 @@ document.getElementById('registerForm').addEventListener('submit', e => {
   if (!/^[a-z0-9_]+$/i.test(username)) { err.textContent = 'Username: letters, numbers, underscores only.'; return; }
 
   let users = JSON.parse(localStorage.getItem('sw_users') || 'null') || [
-    { id: 'u1', username: 'alice', name: 'Alice Chen', color: '#00e5ff', password: 'demo123', role: 'admin' },
+    { id: 'u1', username: 'alice', name: 'Alice Chen', color: '#2563eb', password: 'demo123', role: 'admin' },
     { id: 'u2', username: 'bob',   name: 'Bob Hartley', color: '#ff4d6d', password: 'demo123', role: 'member' },
     { id: 'u3', username: 'carla', name: 'Carla Moss',  color: '#bd93f9', password: 'demo123', role: 'member' },
     { id: 'u4', username: 'dev',   name: 'Dev Sharma',  color: '#69ff47', password: 'demo123', role: 'member' },

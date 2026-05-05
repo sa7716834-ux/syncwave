@@ -7,7 +7,7 @@
 window.DB = (() => {
 
   const DEMO_USERS = [
-    { id: 'u1', username: 'alice', name: 'Alice Chen', color: '#00e5ff', password: 'demo123', role: 'admin', online: true },
+    { id: 'u1', username: 'alice', name: 'Alice Chen', color: '#2563eb', password: 'demo123', role: 'admin', online: true },
     { id: 'u2', username: 'bob',   name: 'Bob Hartley', color: '#ff4d6d', password: 'demo123', role: 'member', online: true },
     { id: 'u3', username: 'carla', name: 'Carla Moss',  color: '#bd93f9', password: 'demo123', role: 'member', online: false },
     { id: 'u4', username: 'dev',   name: 'Dev Sharma',  color: '#69ff47', password: 'demo123', role: 'member', online: true },
@@ -101,7 +101,7 @@ window.DB = (() => {
       id: 'u' + (Date.now()),
       username: data.username,
       name: data.name,
-      color: data.color || '#00e5ff',
+      color: data.color || '#2563eb',
       password: data.password,
       role: 'member',
       online: true,

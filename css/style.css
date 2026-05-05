@@ -1,27 +1,27 @@
 /* ============================================================
-   SyncWave — Industrial Terminal Aesthetic
-   JetBrains Mono + DM Sans
-   ============================================================ */
+  SyncWave — Clean Light Collaboration UI
+  JetBrains Mono + DM Sans
+  ============================================================ */
 
 :root {
-  --bg-base:        #0d0f12;
-  --bg-surface:     #151820;
-  --bg-elevated:    #1e2330;
-  --bg-hover:       #252c3a;
-  --bg-active:      #2a3347;
-  --accent:         #00e5ff;
-  --accent-dim:     rgba(0,229,255,0.12);
-  --accent-glow:    rgba(0,229,255,0.25);
+  --bg-base:        #f4f7fb;
+  --bg-surface:     #ffffff;
+  --bg-elevated:    #eef2f8;
+  --bg-hover:       #e2e8f3;
+  --bg-active:      #d7dfee;
+  --accent:         #2563eb;
+  --accent-dim:     rgba(37,99,235,0.10);
+  --accent-glow:    rgba(37,99,235,0.18);
   --red:            #ff4d6d;
   --green:          #69ff47;
   --yellow:         #ffd60a;
   --purple:         #bd93f9;
   --orange:         #ff9f43;
-  --text-primary:   #e8eaf0;
-  --text-secondary: #8b93a8;
-  --text-muted:     #4a5168;
-  --border:         rgba(255,255,255,0.06);
-  --border-accent:  rgba(0,229,255,0.25);
+  --text-primary:   #182033;
+  --text-secondary: #54607a;
+  --text-muted:     #8b95aa;
+  --border:         rgba(17,24,39,0.08);
+  --border-accent:  rgba(37,99,235,0.22);
   --radius-sm:      4px;
   --radius-md:      8px;
   --radius-lg:      12px;
@@ -32,16 +32,20 @@
   --transition:     0.15s ease;
 }
 
-[data-theme="light"] {
-  --bg-base:        #f0f2f5;
-  --bg-surface:     #ffffff;
-  --bg-elevated:    #e8ecf2;
-  --bg-hover:       #dde2ec;
-  --bg-active:      #d0d7e6;
-  --text-primary:   #1a1e2e;
-  --text-secondary: #4a5168;
-  --text-muted:     #9ba3b8;
-  --border:         rgba(0,0,0,0.07);
+[data-theme="dark"] {
+  --bg-base:        #0d0f12;
+  --bg-surface:     #151820;
+  --bg-elevated:    #1e2330;
+  --bg-hover:       #252c3a;
+  --bg-active:      #2a3347;
+  --accent:         #00e5ff;
+  --accent-dim:     rgba(0,229,255,0.12);
+  --accent-glow:    rgba(0,229,255,0.25);
+  --text-primary:   #e8eaf0;
+  --text-secondary: #8b93a8;
+  --text-muted:     #4a5168;
+  --border:         rgba(255,255,255,0.06);
+  --border-accent:  rgba(0,229,255,0.25);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -113,7 +117,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .auth-glow {
   position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);
   width: 600px; height: 400px;
-  background: radial-gradient(ellipse, rgba(0,229,255,0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(37,99,235,0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -129,7 +133,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-top: 1px solid var(--border-accent);
   border-radius: var(--radius-lg);
   padding: 28px;
-  box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+  box-shadow: 0 24px 64px rgba(15,23,42,0.12);
 }
 
 .brand {
@@ -517,7 +521,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: absolute; bottom: 68px; right: 16px;
   background: var(--bg-elevated); border: 1px solid var(--border);
   border-radius: var(--radius-lg); padding: 10px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 32px rgba(15,23,42,0.14);
   z-index: 200;
 }
 .emoji-grid {
@@ -563,7 +567,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ---- MODALS ---- */
 .modal-overlay {
   position: fixed; inset: 0; z-index: 500;
-  background: rgba(0,0,0,0.6);
+  background: rgba(15,23,42,0.28);
   display: flex; align-items: center; justify-content: center;
   padding: 16px;
   animation: fadeIn 0.15s ease;
@@ -576,7 +580,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-top: 1px solid var(--border-accent);
   border-radius: var(--radius-lg);
   width: 100%; max-width: 400px;
-  box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+  box-shadow: 0 24px 64px rgba(15,23,42,0.16);
   animation: slideUp 0.2s ease;
 }
 .modal-wide { max-width: 540px; }
@@ -635,7 +639,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-left: 3px solid var(--accent);
   border-radius: var(--radius-md);
   font-size: 13px; color: var(--text-primary);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 24px rgba(15,23,42,0.14);
   animation: toastIn 0.25s ease;
   min-width: 240px; max-width: 320px;
 }
@@ -660,7 +664,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .mobile-overlay {
     display: block;
     position: fixed; inset: 0; z-index: 250;
-    background: rgba(0,0,0,0.5);
+    background: rgba(15,23,42,0.22);
     opacity: 0; pointer-events: none;
     transition: opacity 0.25s ease;
   }
@@ -671,7 +675,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ---- IMAGE LIGHTBOX ---- */
 .lightbox {
   position: fixed; inset: 0; z-index: 600;
-  background: rgba(0,0,0,0.85);
+  background: rgba(15,23,42,0.82);
   display: flex; align-items: center; justify-content: center;
   cursor: zoom-out;
 }

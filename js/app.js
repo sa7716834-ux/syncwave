@@ -621,9 +621,11 @@ document.getElementById('logoutBtn').addEventListener('click', () => {
 //  THEME TOGGLE
 // ======================================================
 function setupTheme() {
-  const saved = localStorage.getItem('sw_theme') || 'dark';
-  document.documentElement.dataset.theme = saved;
-  updateThemeIcon(saved);
+  const saved = localStorage.getItem('sw_theme');
+  const theme = saved === 'dark' ? 'light' : (saved || 'light');
+  document.documentElement.dataset.theme = theme;
+  localStorage.setItem('sw_theme', theme);
+  updateThemeIcon(theme);
 }
 
 document.getElementById('themeToggle').addEventListener('click', () => {
